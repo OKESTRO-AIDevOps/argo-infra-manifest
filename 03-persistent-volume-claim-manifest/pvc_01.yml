@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+        name: theia-pvc-01
+        namespace: keti-product
+spec:
+        accessModes:
+                - ReadWriteOnce
+        resources:
+                requests:
+                        storage: 1Gi
+        storageClassName: keti-theia-ide-sc
