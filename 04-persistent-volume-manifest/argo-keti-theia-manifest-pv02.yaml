@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+        name: theia-pv02
+spec:
+        accessModes:
+                - ReadWriteOnce
+        capacity:
+                storage: 3Gi
+        persistentVolumeReclaimPolicy: Retain
+        storageClassName: keti-theia-pv-02
+        nfs:
+                server: 10.0.2.192
+                path: /pv/keti/auth/01/workspace/
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+        name: theia-dind-pv02
+spec:
+        accessModes:
+                - ReadWriteOnce
+        capacity:
+                storage: 15Gi
+        persistentVolumeReclaimPolicy: Retain
+        storageClassName: keti-theia-dind-pv-02
+        nfs:
+                server: 10.0.2.192
+                path: /pv/keti/auth/01/dind-workspace/
