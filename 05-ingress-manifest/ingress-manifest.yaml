@@ -29,3 +29,10 @@ spec:
                                                   name: theia-ingress-service02
                                                   port:
                                                           number: 30125
+                                - path: /keti03(/|$)(.*)
+                                  pathType: Prefix
+                                  backend:
+                                          service:
+                                                  name: theia-ingress-service03
+                                                  port:
+                                                          number: 30125
