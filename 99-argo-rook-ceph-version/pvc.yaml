@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+        name: rook-ceph-example-pvc
+        namespace: rook-ceph-example
+spec:
+        accessModes:
+                - ReadWriteMany
+        resources:
+                requests:
+                        storage: 4Gi
+        storageClassName: rook-cephfs
